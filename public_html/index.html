@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <title>ShopList</title> 
+        <link rel="stylesheet" href="jquery.mobile-1.3.2.css" />
+        <script src="jquery-1.7.1.min.js"></script>
+        <script src="jquery.mobile-1.3.1.min.js"></script>
+        <link href="css/buttons.css" rel="stylesheet" type="text/css"/>
+        <link href="css/input_areas.css" rel="stylesheet" type="text/css"/>
+        <link href="css/switches.css" rel="stylesheet" type="text/css"/>
+        <link href="css/lists.css" rel="stylesheet" type="text/css"/>
+        <script src="app.js"></script>
+    </head> 
+
+    <body> 
+
+        <!-- Start of first page: #home -->
+        <div data-role="page" id="home">
+            <div data-role="header" data-position="fixed">
+                <h3>ShopList</h3>  
+            </div><!-- /header -->
+
+            <div data-role="content">
+                <a href="#" id="btnAddList" data-role="button">Új lista</a>
+            </div><!-- /content -->
+
+            <div id="list-of-lists" data-role="content">
+            </div>
+            
+        </div><!-- /page home -->
+
+        <!-- Start of the second page : #add-notes -->
+        <div data-role="page" id="add-lists" data-add-back-btn="true">
+
+            <div data-role=header>
+                <h1>Új lista</h1>
+            </div>
+            <div data-role="content">
+                <input type="text" id="listTitle" value="" placeholder="Lista neve" required="" autofocus/>
+                <input type="text" id="listElement" value="" placeholder="Új tétel"  />
+              
+                
+                <a href="#" id="btnNewElement" data-role="button">Új tétel mentés</a>
+                <a href="#" id="btnSaveList" data-role="button">Lista mentés</a>
+                <a href="#" id="btnClearLists" data-role="button">Törlés</a>
+            </div>
+
+        </div> <!-- /page add-notes -->
+
+<!--    Start of the third page : #view-list -->
+        <div data-role="page" id="view-list" data-add-back-btn="true">
+
+            <div data-role=header>
+                <h1 id="cim"></h1>
+                <a href="#" data-role="button" class="ui-btn-right" id="clearListBtn">Törlés</a>
+            </div>
+            
+            <div id="listView" data-type="list" data-role="content">
+               
+            </div>
+
+        </div> 
+    </body>
+</html>
